@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My News App {{ mySettings }}
+    </ion-title>
+
+    <ion-buttons end>
+    <button (click)="settings()"><ion-icon md="md-settings" ios="ios-settings-outline"></ion-icon></button>
+</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<h1> Welcome {{ mname }}</h1>
+
+
+<ion-list>
+	<ion-item *ngFor="let q of quotes">
+
+<h1>{{ q.quote }}</h1>
+<h2>{{ q.author }}</h2>
+
+</ion-item>
+
+</ion-list>
+ 
+
+
+	<button ion-button  round (click)="updateNews()">News
+	<ion-icon icon-left   md="md-globe"></ion-icon></button>	
+ 
+</ion-content>
